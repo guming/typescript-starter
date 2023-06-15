@@ -29,13 +29,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-          cache-dependency-path: "yarn.lock"
+          # cache: 'yarn'
+          # cache-dependency-path: "yarn.lock"
       - name: Install dependencies
         run: yarn
       - run: yarn lint
 
   S3PackageUpload:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
