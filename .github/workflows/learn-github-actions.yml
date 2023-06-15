@@ -35,6 +35,7 @@ jobs:
         run: yarn
       - run: npm install eslint-plugin-import@latest --save-dev
       - run: yarn lint
+      - run: yarn build
 
   S3PackageUpload:
     needs: build
