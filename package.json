@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon  -e  ts,tsx  --exec ts-node ./src/index.ts",
     "build": "rm -rf ./dist && tsc --project .",
-    "start": "yarn build && node ./dist/index.js",
+    "start": "yarn build && yarn dev",
     "lint": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
     "clean": "rm -rf dist/ .logs/",
     "docker": "./shell/container_builder.sh"
