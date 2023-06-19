@@ -1,6 +1,6 @@
 FROM node:19
 USER node
-RUN mkdir -p /home/node/app
+RUN mkdir -p /home/node/app/dist
 WORKDIR /home/node/app
 
 # Copy distributable code
